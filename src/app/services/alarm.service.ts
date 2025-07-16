@@ -2,6 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+export interface Machine {
+  id: number | string;
+  name: string;
+  faultReason: string;
+  faultDetail: string;
+  faultTime: string;
+}
+
 export interface Alarm {
   id: number;
   name: string;

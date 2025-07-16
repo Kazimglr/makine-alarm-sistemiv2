@@ -1,13 +1,26 @@
-<div class="container">
-  <h1>{{ title }}</h1>
-  <h2>Makine Alarm Listesi</h2>
-  <ul>
-    <li *ngFor="let alarm of alarms">
-      <strong>{{ alarm.name }}</strong> <br>
-      <span>Arıza Nedeni: {{ alarm.faultReason }}</span> <br>
-      <span>Detay: {{ alarm.faultDetail }}</span> <br>
-      <span>Zaman: {{ alarm.faultTime | date:'medium' }}</span>
-      <hr>
-    </li>
-  </ul>
+<div class="header">
+  <h1>Makine Alarm Sistemi</h1>
+  <p>Gerçek Zamanlı Üretim Hattı İzleme</p>
+  <div class="date-time">{{ currentDate | date:'fullDate' }} , {{ currentDate | date:'HH:mm:ss' }}</div>
+</div>
+
+<div class="main-container">
+  <div class="alarms-container">
+    <h2>Arızalı Makineler ({{ alarms.length }})</h2>
+    <div class="alarms-grid">
+      <div *ngFor="let alarm of alarms" class="alarm-box">
+        <h3>{{ alarm.name }}</h3>
+        <p><strong>Arıza Nedeni:</strong> {{ alarm.faultReason }}</p>
+        <p><strong>Detay:</strong> {{ alarm.faultDetail }}</p>
+        <p><strong>Arıza Zamanı:</strong> {{ alarm.faultTime | date:'dd MMMM yyyy, HH:mm:ss' }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="status-box">
+    <h3>Durum Bilgisi</h3>
+    <p>Toplam Makine: {{ totalMachines }}</p>
+    <p>Çalışan Makine: {{ workingMachines }}</p>
+    <p>Arızalı Makine: {{ faultyMachines }}</p>
+  </div>
 </div>

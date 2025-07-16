@@ -1,12 +1,24 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule, DatePipe } from '@angular/common';
+import { AlarmService, Alarm } from './services/alarm.service'; // DİKKAT: DOSYA YOLU BURADA DOĞRU OLMALI!
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'],
+  providers: [DatePipe]
 })
-export class App {
-  protected title = 'makine-alarm-sistemiv2';
+export class App implements OnInit {
+  title = 'makine-alarm-sistemiv2';
+  alarms: Alarm[] = [];
+
+  constructor(private alarmService: AlarmService) {}
+
+  ngOnInit() {
+    this.alarmService.getAlarms().subscribe((data: Alarm[]) => {
+      this.alarms = data;
+    });
+  }
 }

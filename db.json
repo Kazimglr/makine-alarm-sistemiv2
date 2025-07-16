@@ -1,0 +1,844 @@
+{
+  "alarms": [
+    {
+      "id": 1,
+      "name": "Pres Makinesi 01",
+      "faultReason": "Aşırı Isınma",
+      "faultDetail": "Sıcaklık sınırı aşıldı.",
+      "faultTime": "2025-07-11T12:11:00"
+    },
+    {
+      "id": 2,
+      "name": "Frez Makinesi 02",
+      "faultReason": "Düşük Yağ Basıncı",
+      "faultDetail": "Yağ basıncı kritik seviyesinin altına düştü.",
+      "faultTime": "2025-07-11T12:05:00"
+    },
+    {
+      "id": 3,
+      "name": "Hidrolik Pres 03",
+      "faultReason": "Titreşim Limiti",
+      "faultDetail": "Titreşim seviyesi çok yüksek.",
+      "faultTime": "2025-07-11T11:55:00"
+    },
+    {
+      "id": 4,
+      "name": "CNC Tezgah 04",
+      "faultReason": "Sensör Arızası",
+      "faultDetail": "Konum sensörü arızalı.",
+      "faultTime": "2025-07-11T11:52:00"
+    },
+    {
+      "id": 5,
+      "name": "MTB45",
+      "faultReason": "Acil Stop Aktif",
+      "faultDetail": "Acil stop butonuna basıldı.",
+      "faultTime": "2025-07-11T11:50:00"
+    },
+    {
+      "id": 6,
+      "name": "RTB-007",
+      "faultReason": "Düşük Hava Basıncı",
+      "faultDetail": "Pnömatik hava basıncı çok düşük.",
+      "faultTime": "2025-07-11T11:45:00"
+    },
+    {
+      "id": 7,
+      "name": "MTB-007",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 8,
+      "name": "MTB-008",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 9,
+      "name": "MTB-009",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 10,
+      "name": "MTB-010",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 11,
+      "name": "MTB-011",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 12,
+      "name": "MTB-012",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 13,
+      "name": "MTB-013",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 14,
+      "name": "MTB-014",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 15,
+      "name": "MTB-015",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 16,
+      "name": "MTB-016",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 17,
+      "name": "MTB-017",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 18,
+      "name": "MTB-018",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 19,
+      "name": "MTB-019",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 20,
+      "name": "MTB-020",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 21,
+      "name": "MTB-021",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 22,
+      "name": "MTB-022",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 23,
+      "name": "MTB-023",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 24,
+      "name": "MTB-024",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 25,
+      "name": "MTB-025",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 26,
+      "name": "MTB-026",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 27,
+      "name": "MTB-027",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 28,
+      "name": "MTB-028",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 29,
+      "name": "MTB-029",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 30,
+      "name": "MTB-030",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 31,
+      "name": "MTB-031",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 32,
+      "name": "MTB-032",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 33,
+      "name": "MTB-033",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 34,
+      "name": "MTB-034",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 35,
+      "name": "MTB-035",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 36,
+      "name": "MTB-036",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 37,
+      "name": "MTB-037",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 38,
+      "name": "MTB-038",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 39,
+      "name": "MTB-039",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 40,
+      "name": "MTB-040",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 41,
+      "name": "MTB-041",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 42,
+      "name": "MTB-042",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 43,
+      "name": "MTB-043",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 44,
+      "name": "MTB-044",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 45,
+      "name": "MTB-045",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 46,
+      "name": "MTB-046",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 47,
+      "name": "MTB-047",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 48,
+      "name": "MTB-048",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 49,
+      "name": "MTB-049",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 50,
+      "name": "MTB-050",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 51,
+      "name": "MTB-051",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 52,
+      "name": "MTB-052",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 53,
+      "name": "MTB-053",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 54,
+      "name": "MTB-054",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 55,
+      "name": "MTB-055",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 56,
+      "name": "MTB-056",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 57,
+      "name": "MTB-057",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 58,
+      "name": "MTB-058",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 59,
+      "name": "MTB-059",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 60,
+      "name": "MTB-060",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 61,
+      "name": "MTB-061",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 62,
+      "name": "MTB-062",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 63,
+      "name": "MTB-063",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 64,
+      "name": "MTB-064",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 65,
+      "name": "MTB-065",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 66,
+      "name": "MTB-066",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 67,
+      "name": "MTB-067",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 68,
+      "name": "MTB-068",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 69,
+      "name": "MTB-069",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 70,
+      "name": "MTB-070",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 71,
+      "name": "MTB-071",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 72,
+      "name": "MTB-072",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 73,
+      "name": "MTB-073",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 74,
+      "name": "MTB-074",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 75,
+      "name": "MTB-075",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 76,
+      "name": "MTB-076",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 77,
+      "name": "MTB-077",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 78,
+      "name": "MTB-078",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 79,
+      "name": "MTB-079",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 80,
+      "name": "MTB-080",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 81,
+      "name": "MTB-081",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 82,
+      "name": "MTB-082",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 83,
+      "name": "MTB-083",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 84,
+      "name": "MTB-084",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 85,
+      "name": "MTB-085",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 86,
+      "name": "MTB-086",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 87,
+      "name": "MTB-087",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 88,
+      "name": "MTB-088",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 89,
+      "name": "MTB-089",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 90,
+      "name": "MTB-090",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 91,
+      "name": "MTB-091",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 92,
+      "name": "MTB-092",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 93,
+      "name": "MTB-093",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 94,
+      "name": "MTB-094",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 95,
+      "name": "MTB-095",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 96,
+      "name": "MTB-096",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 97,
+      "name": "MTB-097",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 98,
+      "name": "MTB-098",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 99,
+      "name": "MTB-099",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 100,
+      "name": "MTB-100",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 101,
+      "name": "MTB-101",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 102,
+      "name": "MTB-102",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 103,
+      "name": "MTB-103",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 104,
+      "name": "MTB-104",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 105,
+      "name": "MTB-105",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 106,
+      "name": "MTB-106",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 107,
+      "name": "MTB-107",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 108,
+      "name": "MTB-108",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 109,
+      "name": "MTB-109",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 110,
+      "name": "MTB-110",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 111,
+      "name": "MTB-111",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 112,
+      "name": "MTB-112",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 113,
+      "name": "MTB-113",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 114,
+      "name": "MTB-114",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 115,
+      "name": "MTB-115",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 116,
+      "name": "MTB-116",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 117,
+      "name": "MTB-117",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 118,
+      "name": "MTB-118",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 119,
+      "name": "MTB-119",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    },
+    {
+      "id": 120,
+      "name": "MTB-120",
+      "faultReason": "",
+      "faultDetail": "",
+      "faultTime": ""
+    }
+  ]
+}

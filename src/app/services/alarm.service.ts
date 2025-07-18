@@ -9,7 +9,7 @@ export interface Machine {
   faultDetail: string;
   faultTime: string;
 }
-
+//
 export interface Alarm {
   id: number;
   name: string;

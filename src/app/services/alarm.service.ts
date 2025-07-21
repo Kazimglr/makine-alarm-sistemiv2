@@ -1,15 +1,7 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-export interface Machine {
-  id: number | string;
-  name: string;
-  faultReason: string;
-  faultDetail: string;
-  faultTime: string;
-}
-//
 export interface Alarm {
   id: number;
   name: string;
@@ -22,11 +14,11 @@ export interface Alarm {
   providedIn: 'root'
 })
 export class AlarmService {
-  private apiUrl = 'http://localhost:3000/alarms';
+  private apiUrl = 'https://localhost:7120/api/Alarm';
 
   constructor(private http: HttpClient) {}
 
   getAlarms(): Observable<Alarm[]> {
-    return this.http.get<Alarm[]>(this.apiUrl + '?_limit=120');
+    return this.http.get<Alarm[]>(this.apiUrl);
   }
 }

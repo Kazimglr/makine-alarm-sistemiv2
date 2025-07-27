@@ -22,22 +22,16 @@
                     <div *ngFor="let alarm of alarms" class="alarm-box">
                         <h3>{{ alarm.name }}</h3>
                         <p><strong>Arıza Nedeni:</strong> {{ alarm.faultReason }}</p>
-                        <p><strong>Detay:</strong> {{ alarm.faultDetail }}</p>
-                        <p><strong>Arıza Zamanı:</strong> {{ alarm.faultTime | date:'dd MMMM yyyy, HH:mm:ss' }}</p>
                     </div>
                     <!-- Kesintisiz döngü için kart setini tekrarla -->
                     <div *ngFor="let alarm of alarms" class="alarm-box">
                         <h3>{{ alarm.name }}</h3>
                         <p><strong>Arıza Nedeni:</strong> {{ alarm.faultReason }}</p>
-                        <p><strong>Detay:</strong> {{ alarm.faultDetail }}</p>
-                        <p><strong>Arıza Zamanı:</strong> {{ alarm.faultTime | date:'dd MMMM yyyy, HH:mm:ss' }}</p>
                     </div>
                     <!-- Daha da kesintisiz döngü için bir kez daha tekrarla -->
                     <div *ngFor="let alarm of alarms" class="alarm-box">
                         <h3>{{ alarm.name }}</h3>
                         <p><strong>Arıza Nedeni:</strong> {{ alarm.faultReason }}</p>
-                        <p><strong>Detay:</strong> {{ alarm.faultDetail }}</p>
-                        <p><strong>Arıza Zamanı:</strong> {{ alarm.faultTime | date:'dd MMMM yyyy, HH:mm:ss' }}</p>
                     </div>
                 </div>
             </div>
@@ -49,6 +43,13 @@
             <p>Çalışan Makine: {{ workingMachines }}</p>
             <p>Arızalı Makine: {{ faultyMachines }}</p>
         </div>
+        
     </div>
+    <div *ngIf="showToast && toastAlarm" class="toast">
+  <strong>🔔 Yeni Alarm Geldi</strong><br>
+  Makine: {{ toastAlarm.name }}<br>
+  Arıza: {{ toastAlarm.faultReason }}
+</div>
+
 </body>
 </html>

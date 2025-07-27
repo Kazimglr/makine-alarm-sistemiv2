@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SignalRService } from '../services/signalr.service'; // yol doğruysa bu
 
 @Component({
   selector: 'app-component-name',
-  imports: [],
   templateUrl: './component-name.html',
-  styleUrl: './component-name.css'
+  styleUrls: ['./component-name.css']
 })
-export class ComponentName {
+export class ComponentNameComponent implements OnInit {
+
+  constructor(private signalRService: SignalRService) {}
+
+  ngOnInit(): void {
+    this.signalRService.startConnection();
+  }
 
 }

@@ -8,6 +8,7 @@ export interface Alarm {
   faultReason: string;
   faultDetail: string;
   faultTime: string;
+
 }
 
 @Injectable({

@@ -11,8 +11,8 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: #5b5d5f;
-  padding: 6px 20px 6px 16px;
+  background-color: #b8cee3;
+  padding: 2px 20px 2px 16px;
   box-sizing: border-box;
   border-radius: 0 0 10px 10px;
   min-height: 38px;
@@ -24,11 +24,11 @@ body {
   gap: 16px;
 }
 .header-logo {
-  height: 94px; /* daha küçük bar için */
+  height: 124px; /* daha küçük bar için */
   width: auto;
 }
 .header-title {
-  color: white;
+  color: rgb(14, 14, 14);
   font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 1px;

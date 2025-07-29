@@ -18,7 +18,7 @@ export class SignalRService {
     console.log('🟡 SignalR bağlantısı başlatılıyor...');
 
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl('https://localhost:7120/hubs/alarm') // URL doğruysa kalsın
+      .withUrl('http://localhost:7120/hubs/alarm') // URL doğruysa kalsın
       .build();
 
     this.hubConnection

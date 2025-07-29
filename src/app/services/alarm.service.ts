@@ -15,7 +15,7 @@ export interface Alarm {
   providedIn: 'root'
 })
 export class AlarmService {
-  private apiUrl = 'https://localhost:7120/api/Alarm';
+  private apiUrl = 'http://localhost:7120/api/Alarm';
 
   constructor(private http: HttpClient) {}
 

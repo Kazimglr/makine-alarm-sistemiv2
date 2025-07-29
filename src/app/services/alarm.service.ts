@@ -3,18 +3,16 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 export interface Alarm {
-  id: number;
-  name: string;
-  faultReason: string;
-  faultDetail: string;
-  faultTime: string;
+  nodeName: string;
+  tagDescr: string;
 }
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlarmService {
-  private apiUrl = 'https://localhost:7091/api/machines';
+  private apiUrl = 'http://10.211.48.210:7120/api/AlarmData/filtered';
 
   constructor(private http: HttpClient) {}
 

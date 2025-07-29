@@ -25,8 +25,8 @@
 <div class="main-container-grid">
   <div class="alarms-grid-2x2">
     <div *ngFor="let alarm of visibleAlarms" class="alarm-box-grid">
-      <h2>{{ alarm.name }}</h2>
-      <p><strong>Arıza Nedeni:</strong> {{ alarm.faultReason }}</p>
+      <h2>{{ alarm.nodeName }}</h2>
+      <p><strong>Arıza Nedeni:</strong> {{ alarm.tagDescr }}</p>
     </div>
   </div>
 </div>

@@ -22,7 +22,7 @@ export class App implements OnInit, OnDestroy {
 
   constructor(private alarmService: AlarmService) {}
 
-  ngOnInit() {
+ngOnInit() {
     this.loadAlarms(); // İlk yükleme
 
     // 20 saniyede bir grup güncelleme devam etsin
@@ -32,17 +32,19 @@ export class App implements OnInit, OnDestroy {
     this.refreshIntervalId = setInterval(() => this.loadAlarms(), 60000);
   }
 
-  loadAlarms() {
-    this.alarmService.getAlarms().subscribe((data: Alarm[]) => {
-      this.alarms = data.filter(alarm =>
-        alarm.faultReason?.trim() !== '' && alarm.faultTime?.trim() !== ''
-      );
-      this.faultyMachines = this.alarms.length;
-      this.workingMachines = this.totalMachines - this.faultyMachines;
-      this.currentIndex = 0;
-      this.updateVisibleAlarms();
-    });
-  }
+loadAlarms() {
+  this.alarmService.getAlarms().subscribe((data: Alarm[]) => {
+    console.log("Gelen veri:", data); // <-- Bunu ekle!
+    this.alarms = data;
+    this.faultyMachines = this.alarms.length;
+    this.workingMachines = this.totalMachines - this.faultyMachines;
+    this.currentIndex = 0;
+    this.updateVisibleAlarms();
+    console.log("Visible Alarms:", this.visibleAlarms); // <-- Bunu da ekle!
+  });
+}
+
+
 
   updateVisibleAlarms() {
     const start = this.currentIndex;

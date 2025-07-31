@@ -1,55 +1,22 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makine Alarm Sistemi</title>
-    <link rel="stylesheet" href="app.css">
-</head>
-<body>
-    <div class="header">
-        <h1>Makine Alarm Sistemi</h1>
-        <p>Gerçek Zamanlı Üretim Hattı İzleme</p>
-        <div class="date-time">{{ currentDate | date:'fullDate' }} , {{ currentDate | date:'HH:mm:ss' }}</div>
-    </div>
-
-    <div class="main-container">
-        <div class="alarms-container">
-            <h2>Arızalı Makineler ({{ alarms.length }})</h2>
-            <div class="alarms-scroll-wrapper">
-                <div class="alarms-grid">
-                    <!-- Orijinal 5 kart seti -->
-                    <div *ngFor="let alarm of alarms" class="alarm-box">
-                        <h3>{{ alarm.name }}</h3>
-                        <p><strong>Arıza Nedeni:</strong> {{ alarm.faultReason }}</p>
-                    </div>
-                    <!-- Kesintisiz döngü için kart setini tekrarla -->
-                    <div *ngFor="let alarm of alarms" class="alarm-box">
-                        <h3>{{ alarm.name }}</h3>
-                        <p><strong>Arıza Nedeni:</strong> {{ alarm.faultReason }}</p>
-                    </div>
-                    <!-- Daha da kesintisiz döngü için bir kez daha tekrarla -->
-                    <div *ngFor="let alarm of alarms" class="alarm-box">
-                        <h3>{{ alarm.name }}</h3>
-                        <p><strong>Arıza Nedeni:</strong> {{ alarm.faultReason }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="status-box">
-            <h3>Durum Bilgisi</h3>
-            <p>Toplam Makine: {{ totalMachines }}</p>
-            <p>Çalışan Makine: {{ workingMachines }}</p>
-            <p>Arızalı Makine: {{ faultyMachines }}</p>
-        </div>
-        
-    </div>
-    <div *ngIf="showToast && toastAlarm" class="toast">
-  <strong>🔔 Yeni Alarm Geldi</strong><br>
-  Makine: {{ toastAlarm.name }}<br>
-  Arıza: {{ toastAlarm.faultReason }}
+<div class="top-bar">
+  <div class="top-bar-left">
+    <img src="assets/Brisa.webp" alt="Logo" class="header-logo">
+    <span class="header-title">Makine Alarm Sistemi</span>
+  </div>
+  <div class="status-box">
+    <strong>Durum Bilgisi</strong><br>
+    <small>Toplam Makine: {{ totalMachines }}</small><br>
+    <small>Çalışan Makine: {{ workingMachines }}</small><br>
+    <small>Arızalı Makine: {{ faultyMachines }}</small>
+  </div>
 </div>
 
-</body>
-</html>
+<div class="main-container-grid">
+  <div class="alarms-grid-2x2">
+    <div *ngFor="let alarm of visibleAlarms" class="alarm-box-grid">
+      <h2>{{ alarm.nodeName }}</h2>
+      <p><strong>Arıza Nedeni:</strong> {{ alarm.tagDescr }}</p>
+    </div>
+  </div>
+</div>
+

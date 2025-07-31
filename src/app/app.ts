@@ -1,67 +1,68 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule, DatePipe } from '@angular/common';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { AlarmService, Alarm } from './services/alarm.service';
-import { SignalRService } from './services/signalr.service';
-import { NotificationService } from './services/notification.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './app.html',
-  styleUrls: ['./app.css'],
-  providers: [DatePipe]
+  styleUrls: ['./app.css']
 })
-export class App implements OnInit {
+export class App implements OnInit, OnDestroy {
   title = 'makine-alarm-sistemiv2';
   alarms: Alarm[] = [];
-  latestAlarm: Alarm | null = null;
-  totalMachines: number = 120; // db.json’den veya API'den alınacaksa güncelle
+  totalMachines: number = 120;
   workingMachines: number = 0;
   faultyMachines: number = 0;
-  currentDate: Date = new Date();
+  currentIndex: number = 0;
+  intervalId: any;
+  refreshIntervalId: any;
+  visibleAlarms: Alarm[] = [];
 
-constructor(
-  private alarmService: AlarmService,
-  private signalRService: SignalRService, // BUNU EKLE!
-  private notificationService: NotificationService // ✅ BUNU EKLE
-) {}
-showToast: boolean = false;
-toastAlarm: Alarm | null = null;
+  constructor(private alarmService: AlarmService) {}
 
-  ngOnInit() {
-  this.notificationService.requestPermission(); // 🔔 Bu satır eklenmeli
-
-    this.signalRService.startConnection(); // 🔥 BURAYI EKLE
-    
-    this.signalRService.alarm$.subscribe((alarm: Alarm | null) => {
-  if (alarm) {
-    this.latestAlarm = alarm;
-
-    // Toast bildirimi göster
-    this.toastAlarm = alarm;
-    this.showToast = true;
-
-    // 4 saniye sonra kaybolsun
-    setTimeout(() => {
-      this.showToast = false;
-    }, 4000);
+  ngOnInit(): void {
+    this.loadAlarms();
+    this.intervalId = setInterval(() => this.nextGroup(), 20000);
+    this.refreshIntervalId = setInterval(() => this.loadAlarms(), 60000);
   }
-});
 
+  loadAlarms(): void {
     this.alarmService.getAlarms().subscribe((data: Alarm[]) => {
-      // Sadece faultReason ve faultTime boş olmayanları filtrele
-      this.alarms = data.filter(alarm =>
-        alarm.faultReason?.trim() !== '' && alarm.faultTime?.trim() !== ''
-      );
+      console.log("Gelen veri:", data);
+      this.alarms = data;
 
-      this.faultyMachines = this.alarms.length; // Arızalı makine sayısı
-      this.workingMachines = this.totalMachines - this.faultyMachines; // Çalışan makine sayısı
+      this.faultyMachines = this.alarms.length;
+      this.workingMachines = this.totalMachines - this.faultyMachines;
+      this.currentIndex = 0;
+      this.updateVisibleAlarms();
+      console.log("Visible Alarms:", this.visibleAlarms);
     });
+  }
 
-    // İstersen buraya interval ekleyip currentDate güncelleyebilirsin:
-    setInterval(() => {
-      this.currentDate = new Date();
-    }, 1000);
+  updateVisibleAlarms(): void {
+    const start = this.currentIndex;
+    if (this.alarms.length <= 4) {
+      this.visibleAlarms = this.alarms.slice(0, 4);
+    } else {
+      this.visibleAlarms = this.alarms.slice(start, start + 4);
+      if (this.visibleAlarms.length < 4) {
+        this.visibleAlarms = this.visibleAlarms.concat(
+          this.alarms.slice(0, 4 - this.visibleAlarms.length)
+        );
+      }
+    }
+  }
+
+  nextGroup(): void {
+    if (this.alarms.length <= 4) return;
+    this.currentIndex = (this.currentIndex + 4) % this.alarms.length;
+    this.updateVisibleAlarms();
+  }
+
+  ngOnDestroy(): void {
+    if (this.intervalId) clearInterval(this.intervalId);
+    if (this.refreshIntervalId) clearInterval(this.refreshIntervalId);
   }
 }
